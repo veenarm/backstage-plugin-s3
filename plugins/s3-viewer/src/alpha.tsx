@@ -1,7 +1,4 @@
-import {
-  discoveryApiRef,
-  fetchApiRef,
-} from '@backstage/core-plugin-api';
+import { discoveryApiRef, fetchApiRef } from '@backstage/core-plugin-api';
 import {
   compatWrapper,
   convertLegacyRouteRef,

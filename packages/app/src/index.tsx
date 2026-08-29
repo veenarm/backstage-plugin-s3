@@ -16,9 +16,9 @@
 import ReactDOM from 'react-dom/client';
 import app from './App';
 // 1. Core Backstage UI rules (Load this first)
-import '@backstage/ui/css/styles.css'; 
+import '@backstage/ui/css/styles.css';
 
 // 2. Your custom tokens and design variable overrides (Load this second)
-import './styles.css'; 
+import './styles.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(app);
