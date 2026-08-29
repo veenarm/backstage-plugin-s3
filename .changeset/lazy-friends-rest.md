@@ -1,5 +1,10 @@
 ---
+'@spreadshirt/backstage-plugin-s3-viewer-backend': minor
+'@spreadshirt/backstage-plugin-s3-viewer-common': minor
+'@spreadshirt/backstage-plugin-s3-viewer-node': minor
 '@spreadshirt/backstage-plugin-s3-viewer': minor
+'backend': minor
+'app': minor
 ---
 
 Add a New Frontend System `/alpha` entry with `PageBlueprint` and `ApiBlueprint`, while keeping the legacy plugin API. (Backwards Compatible)
