@@ -7,7 +7,45 @@
   "publishConfig": {
     "access": "public",
     "main": "dist/index.esm.js",
-    "types": "dist/index.d.ts"
+    "types": "dist/index.d.ts",
+    "exports": {
+      ".": {
+        "import": {
+          "types": "./dist/index.d.ts",
+          "default": "./dist/index.esm.js"
+        },
+        "require": {
+          "types": "./dist/index.d.ts",
+          "default": "./dist/index.cjs.js"
+        }
+      },
+      "./alpha": {
+        "import": {
+          "types": "./dist/alpha.d.ts",
+          "default": "./dist/alpha.esm.js"
+        },
+        "require": {
+          "types": "./dist/alpha.d.ts",
+          "default": "./dist/alpha.cjs.js"
+        }
+      },
+      "./package.json": "./package.json"
+    }
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./alpha": "./src/alpha.tsx",
+    "./package.json": "./package.json"
+  },
+  "typesVersions": {
+    "*": {
+      "alpha": [
+        "src/alpha.tsx"
+      ],
+      "package.json": [
+        "package.json"
+      ]
+    }
   },
   "author": {
     "name": "Spreadshirt"
@@ -38,8 +76,11 @@
     "postpack": "backstage-cli package postpack"
   },
   "dependencies": {
+    "@backstage/core-compat-api": "^0.5.14",
     "@backstage/core-components": "^0.18.13",
     "@backstage/core-plugin-api": "^1.12.9",
+    "@backstage/frontend-plugin-api": "^0.18.0",
+    "@backstage/plugin-catalog": "^2.0.8",
     "@material-ui/core": "^4.12.2",
     "@material-ui/icons": "^4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.61",
@@ -54,12 +95,13 @@
     "@backstage/cli": "^0.36.5",
     "@backstage/core-app-api": "^1.20.4",
     "@backstage/dev-utils": "^1.1.26",
+    "@backstage/frontend-dev-utils": "^0.1.5",
     "@backstage/test-utils": "^1.7.21",
     "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "^16.0.0",
     "@testing-library/user-event": "^14.0.0",
     "@types/jest": "*",
-    "cross-fetch": "^4.0.0",
+    "cross-fetch": "^4.1.0",
     "msw": "^2.0.0"
   },
   "files": [
