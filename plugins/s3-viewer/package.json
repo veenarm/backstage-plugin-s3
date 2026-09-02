@@ -74,11 +74,11 @@
     "postpack": "backstage-cli package postpack"
   },
   "dependencies": {
-    "@backstage/core-compat-api": "^0.5.14",
-    "@backstage/core-components": "^0.18.13",
-    "@backstage/core-plugin-api": "^1.12.9",
-    "@backstage/frontend-plugin-api": "^0.18.0",
-    "@backstage/plugin-catalog": "^2.0.8",
+    "@backstage/core-compat-api": "backstage:^",
+    "@backstage/core-components": "backstage:^",
+    "@backstage/core-plugin-api": "backstage:^",
+    "@backstage/frontend-plugin-api": "backstage:^",
+    "@backstage/plugin-catalog": "backstage:^",
     "@material-ui/core": "^4.12.2",
     "@material-ui/icons": "^4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.61",
